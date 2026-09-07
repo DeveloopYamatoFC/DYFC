@@ -5,8 +5,8 @@ const siteData = {
   // ==============================
 
   team: {
-    name: "Develoop Yamato FC",
-    shortName: "DEVELOOP",
+    name: "Develoop YAMATO Football Club",
+    shortName: "Develoop YAMATO Football Club",
     location: "神奈川県大和市",
 
     instagram:
@@ -40,7 +40,7 @@ const siteData = {
       id: 1,
       date: "2026-09-13",
       competition: "神奈川県社会人2部リーグ",
-      homeTeam: "Develoop Yamato FC",
+      homeTeam: "Develoop YAMATO Football Club",
       awayTeam: "クラブテアトロ",
       homeEmblem: "./images/emblem.jpg",
       awayEmblem: "./images/opponents/teatoro.jpg",
@@ -57,7 +57,7 @@ const siteData = {
       id: 1,
       date: "2026-10-11",
       competition: "神奈川県社会人2部リーグ",
-      homeTeam: "Develoop Yamato FC",
+      homeTeam: "Develoop YAMATO Football Club",
       awayTeam: "FC GRANSUMA",
       homeEmblem: "./images/emblem.jpg",
       awayEmblem: "./images/opponents/gransuma.jpg",
@@ -77,7 +77,7 @@ const siteData = {
       id: 2,
       date: "2026-04-12",
       competition: "県社会人リーグ 第1節",
-      homeTeam: "Develoop Yamato FC",
+      homeTeam: "Develoop YAMATO Football Club",
       awayTeam: "TsujidoFC",
       homeEmblem: "./images/emblem.jpg",
       awayEmblem: "./images/opponents/tsujido-fc.jpg",
@@ -125,7 +125,7 @@ const siteData = {
       id: 3,
       date: "2026-04-19",
       competition: "県社会人リーグ 第2節",
-      homeTeam: "Develoop Yamato FC",
+      homeTeam: "Develoop YAMATO Football Club",
       awayTeam: "CLUBMARADO",
       homeEmblem: "./images/emblem.jpg",
       awayEmblem: "./images/opponents/clubmarado.jpg",
@@ -173,7 +173,7 @@ const siteData = {
       id: 4,
       date: "2026-05-10",
       competition: "県社会人リーグ 第3節",
-      homeTeam: "Develoop Yamato FC",
+      homeTeam: "Develoop YAMATO Football Club",
       awayTeam: "FC REBIRTH",
       homeEmblem: "./images/emblem.jpg",
       awayEmblem: "./images/opponents/fc-rebirth.jpg",
@@ -221,7 +221,7 @@ const siteData = {
       id: 5,
       date: "2026-05-24",
       competition: "県社会人リーグ 第4節",
-      homeTeam: "Develoop Yamato FC",
+      homeTeam: "Develoop YAMATO Football Club",
       awayTeam: "瀬谷インターナショナル",
       homeEmblem: "./images/emblem.jpg",
       awayEmblem: "./images/opponents/seya-international.jpg",
@@ -281,7 +281,7 @@ const siteData = {
       id: 6,
       date: "2026-06-07",
       competition: "県社会人リーグ 第5節",
-      homeTeam: "Develoop Yamato FC",
+      homeTeam: "Develoop YAMATO Football Club",
       awayTeam: "JFC FUTURO",
       homeEmblem: "./images/emblem.jpg",
       awayEmblem: "./images/opponents/jfc-futuro.jpg",
@@ -329,7 +329,7 @@ const siteData = {
       id: 7,
       date: "2026-06-21",
       competition: "県社会人リーグ 第6節",
-      homeTeam: "Develoop Yamato FC",
+      homeTeam: "Develoop YAMATO Football Club",
       awayTeam: "FC SOCIOS",
       homeEmblem: "./images/emblem.jpg",
       awayEmblem: "./images/opponents/fc-socios.jpg",
@@ -377,7 +377,7 @@ const siteData = {
       id: 8,
       date: "2026-07-05",
       competition: "県社会人リーグ 第7節",
-      homeTeam: "Develoop Yamato FC",
+      homeTeam: "Develoop YAMATO Football Club",
       awayTeam: "横須賀高校OB",
       homeEmblem: "./images/emblem.jpg",
       awayEmblem: "./images/opponents/yokosuka-ob.jpg",
@@ -431,7 +431,7 @@ const siteData = {
       id: 9,
       date: "2026-07-19",
       competition: "県社会人リーグ 第8節",
-      homeTeam: "Develoop Yamato FC",
+      homeTeam: "Develoop YAMATO Football Club",
       awayTeam: "PAYASO",
       homeEmblem: "./images/emblem.jpg",
       awayEmblem: "./images/opponents/payaso.jpg",
@@ -497,7 +497,7 @@ const siteData = {
       id: 10,
       date: "2026-08-30",
       competition: "県社会人リーグ 第10節",
-      homeTeam: "Develoop Yamato FC",
+      homeTeam: "Develoop YAMATO Football Club",
       awayTeam: "かながわクラブ",
       homeEmblem: "./images/emblem.jpg",
       awayEmblem: "./images/opponents/kanagawa-club.jpg",
@@ -557,7 +557,7 @@ const siteData = {
         "神奈川県社会人2部リーグ Aブロック 第1節",
 
       homeTeam:
-        "Develoop Yamato FC",
+        "Develoop YAMATO Football Club",
 
       awayTeam:
         "デスペルーホ藤沢",
@@ -605,7 +605,7 @@ const siteData = {
         "神奈川県社会人2部リーグ Aブロック 第2節",
 
       homeTeam:
-        "Develoop Yamato FC",
+        "Develoop YAMATO Football Club",
 
       awayTeam:
         "FC Girasole",
@@ -665,7 +665,7 @@ const siteData = {
         "神奈川県社会人2部リーグ Aブロック 第3節",
 
       homeTeam:
-        "Develoop Yamato FC",
+        "Develoop YAMATO Football Club",
 
       awayTeam:
         "横須賀高校OB",
@@ -719,7 +719,7 @@ const siteData = {
         "神奈川県社会人2部リーグ Aブロック 第4節",
 
       homeTeam:
-        "Develoop Yamato FC",
+        "Develoop YAMATO Football Club",
 
       awayTeam:
         "江の島フリッパーズ",
@@ -773,7 +773,7 @@ const siteData = {
         "神奈川県社会人2部リーグ Aブロック 第5節",
 
       homeTeam:
-        "Develoop Yamato FC",
+        "Develoop YAMATO Football Club",
 
       awayTeam:
         "Yokohama Puente",
@@ -833,7 +833,7 @@ const siteData = {
         "神奈川県社会人2部リーグ Aブロック 第6節",
 
       homeTeam:
-        "Develoop Yamato FC",
+        "Develoop YAMATO Football Club",
 
       awayTeam:
         "PAYASO",
@@ -875,7 +875,7 @@ const siteData = {
         "神奈川県社会人2部リーグ Aブロック 第7節",
 
       homeTeam:
-        "Develoop Yamato FC",
+        "Develoop YAMATO Football Club",
 
       awayTeam:
         "FCSOCIOS",
@@ -929,7 +929,7 @@ const siteData = {
         "神奈川県社会人2部リーグ Aブロック 第8節",
 
       homeTeam:
-        "Develoop Yamato FC",
+        "Develoop YAMATO Football Club",
 
       awayTeam:
         "Ringhio",
@@ -963,7 +963,7 @@ const siteData = {
         "神奈川県社会人2部リーグ Aブロック 第9節",
 
       homeTeam:
-        "Develoop Yamato FC",
+        "Develoop YAMATO Football Club",
 
       awayTeam:
         "久野FC",
@@ -997,7 +997,7 @@ const siteData = {
         "神奈川県社会人2部リーグ Aブロック 第10節",
 
       homeTeam:
-        "Develoop Yamato FC",
+        "Develoop YAMATO Football Club",
 
       awayTeam:
         "FCSC",
@@ -1057,7 +1057,7 @@ const siteData = {
         "神奈川県社会人2部リーグ Aブロック 第11節",
 
       homeTeam:
-        "Develoop Yamato FC",
+        "Develoop YAMATO Football Club",
 
       awayTeam:
         "Saltista橋本",
@@ -1099,7 +1099,7 @@ const siteData = {
         "神奈川県社会人2部リーグ Aブロック 第12節",
 
       homeTeam:
-        "Develoop Yamato FC",
+        "Develoop YAMATO Football Club",
 
       awayTeam:
         "瀬谷インターナショナル",
@@ -1147,7 +1147,7 @@ const siteData = {
         "神奈川県社会人2部リーグ Aブロック 第13節",
 
       homeTeam:
-        "Develoop Yamato FC",
+        "Develoop YAMATO Football Club",
 
       awayTeam:
         "かながわクラブ",
