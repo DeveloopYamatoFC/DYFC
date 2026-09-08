@@ -1255,7 +1255,7 @@ const siteData = {
       name: "杉崎 勇哉",
       englishName: "YUYA SUGISAKI",
       position: "DF",
-      comment: "DFリーダー",
+      comment: "蒼眼の城壁（本人要望）",
       faceImage: "./images/players/5a.jpg",
       playImage: "./images/players/5b.jpg",
       details: {
