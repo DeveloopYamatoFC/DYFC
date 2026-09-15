@@ -36,27 +36,10 @@ const siteData = {
 
     // 次の試合
 
-    {
-      id: 1,
-      date: "2026-09-13",
-      competition: "神奈川県社会人2部リーグ",
-      homeTeam: "Develoop YAMATO Football Club",
-      awayTeam: "クラブテアトロ",
-      homeEmblem: "./images/emblem.jpg",
-      awayEmblem: "./images/opponents/teatoro.jpg",
-      place: "及川球技場",
-      kickoff: "17:05",
-      status: "upcoming",
-      homeScore: null,
-      awayScore: null,
-      goals: [],
-      photos: []
-    },
-
      {
       id: 1,
       date: "2026-10-11",
-      competition: "神奈川県社会人2部リーグ",
+      competition: "神奈川県社会人サッカー2部リーグ",
       homeTeam: "Develoop YAMATO Football Club",
       awayTeam: "FC GRANSUMA",
       homeEmblem: "./images/emblem.jpg",
@@ -76,7 +59,7 @@ const siteData = {
     {
       id: 2,
       date: "2026-04-12",
-      competition: "県社会人リーグ 第1節",
+      competition: "神奈川県社会人サッカー2部リーグ 第1節",
       homeTeam: "Develoop YAMATO Football Club",
       awayTeam: "TsujidoFC",
       homeEmblem: "./images/emblem.jpg",
@@ -124,7 +107,7 @@ const siteData = {
     {
       id: 3,
       date: "2026-04-19",
-      competition: "県社会人リーグ 第2節",
+      competition: "神奈川県社会人サッカー2部リーグ 第2節",
       homeTeam: "Develoop YAMATO Football Club",
       awayTeam: "CLUBMARADO",
       homeEmblem: "./images/emblem.jpg",
@@ -172,7 +155,7 @@ const siteData = {
     {
       id: 4,
       date: "2026-05-10",
-      competition: "県社会人リーグ 第3節",
+      competition: "神奈川県社会人サッカー2部リーグ 第3節",
       homeTeam: "Develoop YAMATO Football Club",
       awayTeam: "FC REBIRTH",
       homeEmblem: "./images/emblem.jpg",
@@ -220,7 +203,7 @@ const siteData = {
     {
       id: 5,
       date: "2026-05-24",
-      competition: "県社会人リーグ 第4節",
+      competition: "神奈川県社会人サッカー2部リーグ 第4節",
       homeTeam: "Develoop YAMATO Football Club",
       awayTeam: "瀬谷インターナショナル",
       homeEmblem: "./images/emblem.jpg",
@@ -280,7 +263,7 @@ const siteData = {
     {
       id: 6,
       date: "2026-06-07",
-      competition: "県社会人リーグ 第5節",
+      competition: "神奈川県社会人サッカー2部リーグ 第5節",
       homeTeam: "Develoop YAMATO Football Club",
       awayTeam: "JFC FUTURO",
       homeEmblem: "./images/emblem.jpg",
@@ -328,7 +311,7 @@ const siteData = {
     {
       id: 7,
       date: "2026-06-21",
-      competition: "県社会人リーグ 第6節",
+      competition: "神奈川県社会人サッカー2部リーグ 第6節",
       homeTeam: "Develoop YAMATO Football Club",
       awayTeam: "FC SOCIOS",
       homeEmblem: "./images/emblem.jpg",
@@ -376,7 +359,7 @@ const siteData = {
     {
       id: 8,
       date: "2026-07-05",
-      competition: "県社会人リーグ 第7節",
+      competition: "神奈川県社会人サッカー2部リーグ 第7節",
       homeTeam: "Develoop YAMATO Football Club",
       awayTeam: "横須賀高校OB",
       homeEmblem: "./images/emblem.jpg",
@@ -430,7 +413,7 @@ const siteData = {
     {
       id: 9,
       date: "2026-07-19",
-      competition: "県社会人リーグ 第8節",
+      competition: "神奈川県社会人サッカー2部リーグ 第8節",
       homeTeam: "Develoop YAMATO Football Club",
       awayTeam: "PAYASO",
       homeEmblem: "./images/emblem.jpg",
@@ -490,13 +473,12 @@ const siteData = {
       ]
     },
 
-
-    // 第10節
+       // 第10節
 
     {
       id: 10,
       date: "2026-08-30",
-      competition: "県社会人リーグ 第10節",
+      competition: "神奈川県社会人サッカー2部リーグ 第10節",
       homeTeam: "Develoop YAMATO Football Club",
       awayTeam: "かながわクラブ",
       homeEmblem: "./images/emblem.jpg",
@@ -536,6 +518,38 @@ const siteData = {
           alt: "かながわクラブ戦 試合写真3"
         }
       ]
+    },
+
+    // 第11節
+
+    {
+      id: 11,
+      date: "2026-09-13",
+      competition: "神奈川県社会人サッカー2部リーグ 第11節",
+      homeTeam: "Develoop YAMATO Football Club",
+      awayTeam: "クラブテアトロ",
+      homeEmblem: "./images/emblem.jpg",
+      awayEmblem: "./images/opponents/teatoro.jpg",
+      place: "ツユキ及川球技場",
+      kickoff: "",
+      status: "finished",
+      homeScore: 0,
+      awayScore: 1,
+
+      photos: [
+        {
+          image: "./matches/091301.jpg",
+          alt: "クラブテアトロ戦 試合写真1"
+        },
+        {
+          image: "./matches/091302.jpg",
+          alt: "クラブテアトロ戦 試合写真2"
+        },
+        {
+          image: "./matches/091303.jpg",
+          alt: "クラブテアトロ戦 試合写真3"
+        }
+      ]
     }
   ],
 
@@ -554,7 +568,7 @@ const siteData = {
       id: 202501,
       date: "2025-04-13",
       competition:
-        "神奈川県社会人2部リーグ Aブロック 第1節",
+        "神奈川県社会人サッカー2部リーグ Aブロック 第1節",
 
       homeTeam:
         "Develoop YAMATO Football Club",
@@ -602,7 +616,7 @@ const siteData = {
       id: 202502,
       date: "2025-04-27",
       competition:
-        "神奈川県社会人2部リーグ Aブロック 第2節",
+        "神奈川県社会人サッカー2部リーグ Aブロック 第2節",
 
       homeTeam:
         "Develoop YAMATO Football Club",
@@ -617,7 +631,7 @@ const siteData = {
       
 
       place:
-        "ツユキ及川球戯場",
+        "ツユキ及川球技場",
 
       kickoff: "",
       status: "finished",
@@ -662,7 +676,7 @@ const siteData = {
       id: 202503,
       date: "2025-05-11",
       competition:
-        "神奈川県社会人2部リーグ Aブロック 第3節",
+        "神奈川県社会人サッカー2部リーグ Aブロック 第3節",
 
       homeTeam:
         "Develoop YAMATO Football Club",
@@ -716,7 +730,7 @@ const siteData = {
       id: 202504,
       date: "2025-05-25",
       competition:
-        "神奈川県社会人2部リーグ Aブロック 第4節",
+        "神奈川県社会人サッカー2部リーグ Aブロック 第4節",
 
       homeTeam:
         "Develoop YAMATO Football Club",
@@ -770,7 +784,7 @@ const siteData = {
       id: 202505,
       date: "2025-06-01",
       competition:
-        "神奈川県社会人2部リーグ Aブロック 第5節",
+        "神奈川県社会人サッカー2部リーグ Aブロック 第5節",
 
       homeTeam:
         "Develoop YAMATO Football Club",
@@ -830,7 +844,7 @@ const siteData = {
       id: 202506,
       date: "2025-06-15",
       competition:
-        "神奈川県社会人2部リーグ Aブロック 第6節",
+        "神奈川県社会人サッカー2部リーグ Aブロック 第6節",
 
       homeTeam:
         "Develoop YAMATO Football Club",
@@ -872,7 +886,7 @@ const siteData = {
       id: 202507,
       date: "2025-07-06",
       competition:
-        "神奈川県社会人2部リーグ Aブロック 第7節",
+        "神奈川県社会人サッカー2部リーグ Aブロック 第7節",
 
       homeTeam:
         "Develoop YAMATO Football Club",
@@ -926,7 +940,7 @@ const siteData = {
       id: 202508,
       date: "2025-07-13",
       competition:
-        "神奈川県社会人2部リーグ Aブロック 第8節",
+        "神奈川県社会人サッカー2部リーグ Aブロック 第8節",
 
       homeTeam:
         "Develoop YAMATO Football Club",
@@ -960,7 +974,7 @@ const siteData = {
       id: 202509,
       date: "2025-09-07",
       competition:
-        "神奈川県社会人2部リーグ Aブロック 第9節",
+        "神奈川県社会人サッカー2部リーグ Aブロック 第9節",
 
       homeTeam:
         "Develoop YAMATO Football Club",
@@ -994,7 +1008,7 @@ const siteData = {
       id: 202510,
       date: "2025-09-14",
       competition:
-        "神奈川県社会人2部リーグ Aブロック 第10節",
+        "神奈川県社会人サッカー2部リーグ Aブロック 第10節",
 
       homeTeam:
         "Develoop YAMATO Football Club",
@@ -1054,7 +1068,7 @@ const siteData = {
       id: 202511,
       date: "2025-09-28",
       competition:
-        "神奈川県社会人2部リーグ Aブロック 第11節",
+        "神奈川県社会人サッカー2部リーグ Aブロック 第11節",
 
       homeTeam:
         "Develoop YAMATO Football Club",
@@ -1096,7 +1110,7 @@ const siteData = {
       id: 202512,
       date: "2025-10-26",
       competition:
-        "神奈川県社会人2部リーグ Aブロック 第12節",
+        "神奈川県社会人サッカー2部リーグ Aブロック 第12節",
 
       homeTeam:
         "Develoop YAMATO Football Club",
@@ -1144,7 +1158,7 @@ const siteData = {
       id: 202513,
       date: "2025-11-09",
       competition:
-        "神奈川県社会人2部リーグ Aブロック 第13節",
+        "神奈川県社会人サッカー2部リーグ Aブロック 第13節",
 
       homeTeam:
         "Develoop YAMATO Football Club",
@@ -1255,7 +1269,7 @@ const siteData = {
       name: "杉崎 勇哉",
       englishName: "YUYA SUGISAKI",
       position: "DF",
-      comment: "蒼眼の城壁（本人要望）",
+      comment: "蒼眼の城壁",
       faceImage: "./images/players/5a.jpg",
       playImage: "./images/players/5b.jpg",
       details: {
