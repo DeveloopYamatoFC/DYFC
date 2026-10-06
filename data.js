@@ -54,6 +54,57 @@ const siteData = {
     },
 
 
+     {
+      id: 1,
+      date: "2026-11-01",
+      competition: "神奈川県社会人サッカー2部リーグ",
+      homeTeam: "Develoop YAMATO Football Club",
+      awayTeam: "saltista橋本",
+      homeEmblem: "./images/emblem.jpg",
+      awayEmblem: "./images/opponents/hasimoto.jpg",
+      place: "かもめパーク",
+      kickoff: "21:05",
+      status: "upcoming",
+      homeScore: null,
+      awayScore: null,
+      goals: [],
+      photos: []
+    },
+
+     {
+      id: 1,
+      date: "2026-11-08",
+      competition: "神奈川県社会人サッカー2部リーグ",
+      homeTeam: "Develoop YAMATO Football Club",
+      awayTeam: "OUR FC",
+      homeEmblem: "./images/emblem.jpg",
+      awayEmblem: "./images/opponents/our.jpg",
+      place: "大和ゆとりの森大規模多目的広場",
+      kickoff: "19:05",
+      status: "upcoming",
+      homeScore: null,
+      awayScore: null,
+      goals: [],
+      photos: []
+    },
+
+     {
+      id: 1,
+      date: "2026-11-22",
+      competition: "神奈川県社会人サッカー2部リーグ",
+      homeTeam: "Develoop YAMATO Football Club",
+      awayTeam: "厚木マーカス",
+      homeEmblem: "./images/emblem.jpg",
+      awayEmblem: "./images/opponents/atugi.jpg",
+      place: "綾瀬スポーツ公園",
+      kickoff: "08:50",
+      status: "upcoming",
+      homeScore: null,
+      awayScore: null,
+      goals: [],
+      photos: []
+    },
+
     // 第1節
 
     {
