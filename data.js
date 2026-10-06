@@ -61,7 +61,7 @@ const siteData = {
       homeTeam: "Develoop YAMATO Football Club",
       awayTeam: "saltista橋本",
       homeEmblem: "./images/emblem.jpg",
-      awayEmblem: "./images/opponents/hasimoto.jpg",
+      awayEmblem: "./images/opponents/saltista-hashimoto.jpg",
       place: "かもめパーク",
       kickoff: "21:05",
       status: "upcoming",
