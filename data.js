@@ -36,23 +36,6 @@ const siteData = {
 
     // 次の試合
 
-     {
-      id: 1,
-      date: "2026-10-11",
-      competition: "神奈川県社会人サッカー2部リーグ",
-      homeTeam: "Develoop YAMATO Football Club",
-      awayTeam: "FC GRANSUMA",
-      homeEmblem: "./images/emblem.jpg",
-      awayEmblem: "./images/opponents/gransuma.jpg",
-      place: "大和ゆとりの森",
-      kickoff: "19:05",
-      status: "upcoming",
-      homeScore: null,
-      awayScore: null,
-      goals: [],
-      photos: []
-    },
-
 
      {
       id: 1,
@@ -601,7 +584,49 @@ const siteData = {
           alt: "クラブテアトロ戦 試合写真3"
         }
       ]
-    }
+    },
+
+     // 第12節
+
+     {
+      id: 12,
+      date: "2026-10-11",
+      competition: "神奈川県社会人サッカー2部リーグ 第12節",
+      homeTeam: "Develoop YAMATO Football Club",
+      awayTeam: "FCGRANSUMA",
+      homeEmblem: "./images/emblem.jpg",
+      awayEmblem: "./images/opponents/gransuma.jpg",
+      place: "大和ゆとりの森",
+      kickoff: "",
+      status: "finished",
+      homeScore: 1,
+      awayScore: 0,
+
+      goals: [
+        {
+          scorer: "吉川然",
+          scorerNumber: 15,
+          assist:  null,
+          assistNumber: null 
+        }
+      ],
+
+      photos: [
+        {
+          image: "./matches/101101.jpg",
+          alt: "FCGRANSUMA戦 試合写真1"
+        },
+        {
+          image: "./matches/101102.jpg",
+          alt: "FCGRANSUMA戦 試合写真2"
+        },
+        {
+          image: "./matches/101103.jpg",
+          alt: "FCGRANSUMA戦 試合写真3"
+        }
+      ]
+    },
+
   ],
 
 
