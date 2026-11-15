@@ -36,41 +36,6 @@ const siteData = {
 
     // 次の試合
 
-
-     {
-      id: 1,
-      date: "2026-11-01",
-      competition: "神奈川県社会人サッカー2部リーグ",
-      homeTeam: "Develoop YAMATO Football Club",
-      awayTeam: "saltista橋本",
-      homeEmblem: "./images/emblem.jpg",
-      awayEmblem: "./images/opponents/saltista-hashimoto.jpg",
-      place: "かもめパーク",
-      kickoff: "21:05",
-      status: "upcoming",
-      homeScore: null,
-      awayScore: null,
-      goals: [],
-      photos: []
-    },
-
-     {
-      id: 1,
-      date: "2026-11-08",
-      competition: "神奈川県社会人サッカー2部リーグ",
-      homeTeam: "Develoop YAMATO Football Club",
-      awayTeam: "OUR FC",
-      homeEmblem: "./images/emblem.jpg",
-      awayEmblem: "./images/opponents/our.jpg",
-      place: "大和ゆとりの森大規模多目的広場",
-      kickoff: "19:05",
-      status: "upcoming",
-      homeScore: null,
-      awayScore: null,
-      goals: [],
-      photos: []
-    },
-
      {
       id: 1,
       date: "2026-11-22",
@@ -623,6 +588,79 @@ const siteData = {
         {
           image: "./matches/101103.jpg",
           alt: "FCGRANSUMA戦 試合写真3"
+        }
+      ]
+    },
+
+    // 第13節
+
+    {
+      id: 13,
+      date: "2026-11-01",
+      competition: "神奈川県社会人サッカー2部リーグ 第13節",
+      homeTeam: "Develoop YAMATO Football Club",
+      awayTeam: "saltista橋本",
+      homeEmblem: "./images/emblem.jpg",
+      awayEmblem: "./images/opponents/saltista-hashimoto.jpg",
+      place: "かもめパーク",
+      kickoff: "21:05",
+      status: "finished",
+      homeScore: 1,
+      awayScore: 7,
+
+      goals: [
+        {
+          scorer: "OG",
+          scorerNumber: null,
+          assist: null,
+          assistNumber: null
+        }
+      ],
+
+      photos: [
+        {
+          image: "./matches/110101.jpg",
+          alt: "saltista橋本戦 試合写真1"
+        },
+        {
+          image: "./matches/110102.jpg",
+          alt: "saltista橋本戦 試合写真2"
+        },
+        {
+          image: "./matches/110103.jpg",
+          alt: "saltista橋本戦 試合写真3"
+        }
+      ]
+    },
+
+    // 第14節
+
+    {
+      id: 14,
+      date: "2026-11-08",
+      competition: "神奈川県社会人サッカー2部リーグ 第14節",
+      homeTeam: "Develoop YAMATO Football Club",
+      awayTeam: "OUR FC",
+      homeEmblem: "./images/emblem.jpg",
+      awayEmblem: "./images/opponents/our.jpg",
+      place: "大和ゆとりの森大規模多目的広場",
+      kickoff: "19:05",
+      status: "finished",
+      homeScore: 0,
+      awayScore: 0,
+      goals: [],
+      photos: [
+        {
+          image: "./matches/110801.jpg",
+          alt: "OUR FC戦 試合写真1"
+        },
+        {
+          image: "./matches/110802.jpg",
+          alt: "OUR FC戦 試合写真2"
+        },
+        {
+          image: "./matches/110803.jpg",
+          alt: "OUR FC戦 試合写真3"
         }
       ]
     },
