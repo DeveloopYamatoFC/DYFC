@@ -230,7 +230,6 @@
           大和市、横浜市を中心に活動中
         </p>
 
-index.html
         <!-- トップ画面の移動ボタン -->
 
         <nav
@@ -436,6 +435,7 @@ index.html
           class="season-tab is-active"
           type="button"
           data-season="2026"
+          data-view="results"
           aria-pressed="true"
         >
           2026 SEASON
@@ -445,10 +445,33 @@ index.html
         <button
           class="season-tab"
           type="button"
+          data-season="2026"
+          data-view="standings"
+          aria-pressed="false"
+        >
+          2026 順位表
+        </button>
+
+
+        <button
+          class="season-tab"
+          type="button"
           data-season="2025"
+          data-view="results"
           aria-pressed="false"
         >
           2025 SEASON
+        </button>
+
+
+        <button
+          class="season-tab"
+          type="button"
+          data-season="2025"
+          data-view="standings"
+          aria-pressed="false"
+        >
+          2025 順位表
         </button>
 
       </div>
@@ -467,6 +490,15 @@ index.html
       <div
         id="resultsContainer"
         class="match-list"
+      ></div>
+
+
+      <!-- 順位表 -->
+
+      <div
+        id="standingsContainer"
+        class="standings"
+        hidden
       ></div>
 
     </section>
@@ -595,9 +627,9 @@ index.html
 
       <div
         class="section-title section-title-light"
-      >index.html
+      >
 
-        <div>index.html
+        <div>
 
           <p>
             05 / PLAYERS

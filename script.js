@@ -737,8 +737,9 @@ function displayResults() {
         });
 
 
-        renderResults(
-          button.dataset.season
+        showResultView(
+          button.dataset.season,
+          button.dataset.view
         );
 
       }
@@ -747,9 +748,150 @@ function displayResults() {
   });
 
 
-  renderResults(
-    "2026"
+  showResultView(
+    "2026",
+    "results"
   );
+
+}
+
+
+// ==============================
+// 試合結果 / 順位表の切り替え
+// ==============================
+
+function showResultView(
+  selectedSeason,
+  view
+) {
+
+  const resultsContainer =
+    document.getElementById(
+      "resultsContainer"
+    );
+
+  const standingsContainer =
+    document.getElementById(
+      "standingsContainer"
+    );
+
+
+  const isStandings =
+    view === "standings";
+
+
+  if (resultsContainer) {
+    resultsContainer.hidden = isStandings;
+  }
+
+  if (standingsContainer) {
+    standingsContainer.hidden = !isStandings;
+  }
+
+
+  if (isStandings) {
+
+    renderSeasonSummary(
+      selectedSeason,
+      "standings"
+    );
+
+    renderStandings(
+      selectedSeason
+    );
+
+  } else {
+
+    renderResults(
+      selectedSeason
+    );
+
+  }
+
+}
+
+
+// ==============================
+// シーズン順位（黒い帯）
+// ==============================
+
+function getStandingsData(selectedSeason) {
+
+  return selectedSeason === "2025"
+    ? siteData.previousStandings
+    : siteData.standings;
+
+}
+
+
+function getMyStanding(standings) {
+
+  if (
+    !standings ||
+    !Array.isArray(standings.teams)
+  ) {
+    return null;
+  }
+
+  return standings.teams.find(function (team) {
+    return team.team === standings.myTeam;
+  }) || null;
+
+}
+
+
+function renderSeasonSummary(
+  selectedSeason,
+  view
+) {
+
+  const summary =
+    document.getElementById(
+      "seasonResultSummary"
+    );
+
+
+  if (!summary) {
+    return;
+  }
+
+
+  const standings =
+    getStandingsData(selectedSeason);
+
+  const myStanding =
+    getMyStanding(standings);
+
+
+  const label =
+    view === "standings"
+      ? `${selectedSeason} STANDINGS`
+      : selectedSeason === "2025"
+        ? "2025 SEASON RESULT"
+        : "2026 SEASON";
+
+
+  const leagueName =
+    standings && standings.title
+      ? standings.title
+      : "神奈川県社会人サッカー2部リーグ";
+
+
+  const rankText =
+    myStanding
+      ? ` ${myStanding.rank}位`
+      : "";
+
+
+  summary.innerHTML = `
+    <span>
+      ${label}
+    </span>
+
+    <strong>
+      ${leagueName}${rankText}
+    </strong>
+  `;
 
 }
 
@@ -773,12 +915,6 @@ function renderResults(
   }
 
 
-  const summary =
-    document.getElementById(
-      "seasonResultSummary"
-    );
-
-
   const sourceMatches =
     selectedSeason === "2025"
 
@@ -790,33 +926,10 @@ function renderResults(
       : siteData.matches;
 
 
-  if (summary) {
-
-    summary.innerHTML =
-      selectedSeason === "2025"
-
-        ? `
-          <span>
-            2025 SEASON RESULT
-          </span>
-
-          <strong>
-            神奈川県社会人サッカー2部リーグ
-            Aブロック 3位
-          </strong>
-        `
-
-        : `
-          <span>
-            2026 SEASON
-          </span>
-
-          <strong>
-            神奈川県社会人サッカー2部リーグ
-          </strong>
-        `;
-
-  }
+  renderSeasonSummary(
+    selectedSeason,
+    "results"
+  );
 
 
   const matches =
@@ -1157,6 +1270,239 @@ function createMatchPhotosHtml(photos) {
 
     </div>
   `;
+
+}
+
+
+// ==============================
+// 順位表
+// ==============================
+
+function renderStandings(selectedSeason) {
+
+  const container =
+    document.getElementById(
+      "standingsContainer"
+    );
+
+
+  if (!container) {
+    return;
+  }
+
+
+  const standings =
+    getStandingsData(selectedSeason);
+
+
+  if (
+    !standings ||
+    !Array.isArray(standings.teams) ||
+    standings.teams.length === 0
+  ) {
+
+    container.innerHTML = `
+      <div class="empty-message">
+        順位表は準備中です。
+      </div>
+    `;
+
+    return;
+
+  }
+
+
+  const emblemMap =
+    createEmblemMap();
+
+
+  const rows =
+    standings.teams
+      .map(function (team) {
+
+        const isMyTeam =
+          team.team === standings.myTeam;
+
+        const className = [
+          isMyTeam ? "is-my-team" : "",
+          team.rank === 1 ? "is-first" : ""
+        ].join(" ").trim();
+
+
+        return `
+          <tr class="${className}">
+            <td class="standings-rank">${team.rank}</td>
+            <td class="standings-team">
+              <div class="standings-team-inner">
+                ${createStandingsEmblem(team.team, emblemMap[team.team])}
+                <span>${team.team}</span>
+              </div>
+            </td>
+            <td>${team.played}</td>
+            <td>${team.win}</td>
+            <td>${team.draw}</td>
+            <td>${team.lose}</td>
+            <td class="standings-sub">${team.gf}</td>
+            <td class="standings-sub">${team.ga}</td>
+            <td>${formatGoalDifference(team.gd)}</td>
+            <td class="standings-points">${team.points}</td>
+          </tr>
+        `;
+
+      })
+      .join("");
+
+
+  const updatedText =
+    selectedSeason === "2025"
+      ? "最終順位"
+      : `${formatStandingsDate(standings.updated)} 時点`;
+
+
+  container.innerHTML = `
+
+    <div class="standings-table-wrap">
+
+      <table class="standings-table">
+
+        <thead>
+          <tr>
+            <th>順位</th>
+            <th class="standings-team">チーム</th>
+            <th>試</th>
+            <th>勝</th>
+            <th>分</th>
+            <th>敗</th>
+            <th class="standings-sub">得</th>
+            <th class="standings-sub">失</th>
+            <th>差</th>
+            <th>勝点</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          ${rows}
+        </tbody>
+
+      </table>
+
+    </div>
+
+
+    <p class="standings-note">
+      ${updatedText} ／ 順位：勝点 → 得失点差 → 総得点 → 直接対決
+      ${
+        standings.source
+          ? `<br>出典：<a href="${standings.source}" target="_blank" rel="noopener noreferrer">${standings.source}</a>`
+          : ""
+      }
+    </p>
+  `;
+
+}
+
+
+// 試合データから「チーム名 → エンブレム」を作る
+
+function createEmblemMap() {
+
+  const emblemMap = {
+    [siteData.team.name]: siteData.team.emblemImage
+  };
+
+
+  [
+    ...(siteData.matches || []),
+    ...(siteData.previousMatches || [])
+  ].forEach(function (match) {
+
+    if (match.homeTeam && match.homeEmblem) {
+      emblemMap[match.homeTeam] = match.homeEmblem;
+    }
+
+    if (match.awayTeam && match.awayEmblem) {
+      emblemMap[match.awayTeam] = match.awayEmblem;
+    }
+
+  });
+
+
+  return emblemMap;
+
+}
+
+
+function createStandingsEmblem(
+  name,
+  emblem
+) {
+
+  const initial =
+    Array.from(
+      String(name).replace(/^(FC|JFC|CLUB)\s*/i, "")
+    )[0] || "?";
+
+
+  const fallback =
+    `<span class="standings-emblem standings-emblem-text">${initial}</span>`;
+
+
+  if (!emblem) {
+    return fallback;
+  }
+
+
+  return `
+    <span class="standings-emblem">
+      <img
+        src="${emblem}"
+        alt=""
+        loading="lazy"
+        onerror="showStandingsNoImage(this, '${initial}')"
+      >
+    </span>
+  `;
+
+}
+
+
+function showStandingsNoImage(
+  image,
+  initial
+) {
+
+  const box =
+    image.parentElement;
+
+  if (!box) {
+    return;
+  }
+
+  box.classList.add("standings-emblem-text");
+  box.textContent = initial;
+
+}
+
+
+function formatGoalDifference(value) {
+
+  return value > 0
+    ? `+${value}`
+    : String(value);
+
+}
+
+
+function formatStandingsDate(dateText) {
+
+  const date =
+    new Date(`${dateText}T00:00:00`);
+
+  if (Number.isNaN(date.getTime())) {
+    return "";
+  }
+
+  return `${date.getMonth() + 1}/${date.getDate()}`;
 
 }
 
@@ -1952,6 +2298,22 @@ function getDateInformation(
     new Date(
       `${dateText}T00:00:00`
     );
+
+
+  // 日付未定（Coming Soon）のとき
+
+  if (
+    !dateText ||
+    Number.isNaN(date.getTime())
+  ) {
+
+    return {
+      month: "COMING",
+      day: "--",
+      week: "SOON"
+    };
+
+  }
 
 
   const months = [

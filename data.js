@@ -36,16 +36,16 @@ const siteData = {
 
     // 次の試合
 
-     {
+    {
       id: 1,
-      date: "2026-11-22",
+      date: "",
       competition: "神奈川県社会人サッカー2部リーグ",
       homeTeam: "Develoop YAMATO Football Club",
-      awayTeam: "厚木マーカス",
+      awayTeam: "Coming Soon",
       homeEmblem: "./images/emblem.jpg",
-      awayEmblem: "./images/opponents/atugi.jpg",
-      place: "綾瀬スポーツ公園",
-      kickoff: "08:50",
+      awayEmblem: "",
+      place: "Coming Soon",
+      kickoff: "",
       status: "upcoming",
       homeScore: null,
       awayScore: null,
@@ -661,6 +661,43 @@ const siteData = {
         {
           image: "./matches/110803.jpg",
           alt: "OUR FC戦 試合写真3"
+        }
+      ]
+    },
+
+    // 第15節
+
+    {
+      id: 15,
+      date: "2026-11-22",
+      competition: "神奈川県社会人サッカー2部リーグ 第15節",
+      homeTeam: "Develoop YAMATO Football Club",
+      awayTeam: "厚木マーカス",
+      homeEmblem: "./images/emblem.jpg",
+      awayEmblem: "./images/opponents/atugi.jpg",
+      place: "綾瀬スポーツ公園",
+      kickoff: "08:50",
+      status: "finished",
+      homeScore: 1,
+      awayScore: 6,
+
+      goals: [
+        {
+          scorer: "大木健海",
+          scorerNumber: 27,
+          assist: "川口ケン",
+          assistNumber: 8
+        }
+      ],
+
+      photos: [
+        {
+          image: "./matches/112201.jpg",
+          alt: "厚木マーカス戦 試合写真1"
+        },
+        {
+          image: "./matches/112202.jpg",
+          alt: "厚木マーカス戦 試合写真2"
         }
       ]
     },
@@ -1331,6 +1368,64 @@ const siteData = {
       photos: []
     }
   ],
+
+
+  // ==============================
+  // 順位表
+  // チーム名は試合データと同じ表記。アイコンは試合データのエンブレムを自動で使います
+  // （試合データに無いチームは頭文字の丸アイコン）
+  // ==============================
+
+  // 2026シーズン 2部C組
+  standings: {
+    title: "神奈川県社会人サッカーリーグ 2部 C組",
+    season: "2026",
+    updated: "2026-11-27",
+    source: "https://fakj-shakaijin.com/standings/leaguediv2c/",
+    myTeam: "Develoop YAMATO Football Club",
+    teams: [
+      { rank: 1, team: "厚木マーカス", played: 14, win: 12, draw: 2, lose: 0, gf: 81, ga: 10, gd: 71, points: 38 },
+      { rank: 2, team: "saltista橋本", played: 14, win: 12, draw: 1, lose: 1, gf: 52, ga: 11, gd: 41, points: 37 },
+      { rank: 3, team: "OUR FC", played: 14, win: 9, draw: 1, lose: 4, gf: 21, ga: 21, gd: 0, points: 28 },
+      { rank: 4, team: "JFC FUTURO", played: 14, win: 7, draw: 4, lose: 3, gf: 25, ga: 12, gd: 13, points: 25 },
+      { rank: 5, team: "FCGRANSUMA", played: 14, win: 7, draw: 1, lose: 6, gf: 20, ga: 15, gd: 5, points: 22 },
+      { rank: 6, team: "PAYASO", played: 14, win: 7, draw: 1, lose: 6, gf: 16, ga: 18, gd: -2, points: 22 },
+      { rank: 7, team: "Develoop YAMATO Football Club", played: 14, win: 7, draw: 1, lose: 6, gf: 27, ga: 32, gd: -5, points: 22 },
+      { rank: 8, team: "横須賀高校OB", played: 14, win: 6, draw: 1, lose: 7, gf: 19, ga: 22, gd: -3, points: 19 },
+      { rank: 9, team: "TsujidoFC", played: 14, win: 5, draw: 0, lose: 9, gf: 19, ga: 28, gd: -9, points: 15 },
+      { rank: 10, team: "クラブテアトロ", played: 14, win: 4, draw: 3, lose: 7, gf: 19, ga: 30, gd: -11, points: 15 },
+      { rank: 11, team: "かながわクラブ", played: 14, win: 4, draw: 2, lose: 8, gf: 22, ga: 36, gd: -14, points: 14 },
+      { rank: 12, team: "瀬谷インターナショナル", played: 14, win: 4, draw: 1, lose: 9, gf: 22, ga: 36, gd: -14, points: 13 },
+      { rank: 13, team: "FC SOCIOS", played: 14, win: 4, draw: 1, lose: 9, gf: 16, ga: 34, gd: -18, points: 13 },
+      { rank: 14, team: "FC REBIRTH", played: 14, win: 4, draw: 0, lose: 10, gf: 15, ga: 44, gd: -29, points: 12 },
+      { rank: 15, team: "CLUBMARADO", played: 14, win: 2, draw: 3, lose: 9, gf: 10, ga: 35, gd: -25, points: 9 }
+    ]
+  },
+
+  // 2025シーズン 2部Aブロック（最終）
+  previousStandings: {
+    title: "神奈川県社会人サッカーリーグ 2部 Aブロック",
+    season: "2025",
+    updated: "2026-11-27",
+    source: "https://www.goalnote.net/detail-standings.php?tid=17215",
+    myTeam: "Develoop YAMATO Football Club",
+    teams: [
+      { rank: 1, team: "FCSC", played: 13, win: 11, draw: 1, lose: 1, gf: 41, ga: 10, gd: 31, points: 34 },
+      { rank: 2, team: "久野FC", played: 13, win: 9, draw: 3, lose: 1, gf: 26, ga: 8, gd: 18, points: 30 },
+      { rank: 3, team: "Develoop YAMATO Football Club", played: 13, win: 9, draw: 0, lose: 4, gf: 32, ga: 14, gd: 18, points: 27 },
+      { rank: 4, team: "デスペルーホ藤沢", played: 13, win: 6, draw: 3, lose: 4, gf: 20, ga: 15, gd: 5, points: 21 },
+      { rank: 5, team: "かながわクラブ", played: 13, win: 7, draw: 0, lose: 6, gf: 19, ga: 18, gd: 1, points: 21 },
+      { rank: 6, team: "Saltista橋本", played: 13, win: 6, draw: 2, lose: 5, gf: 21, ga: 17, gd: 4, points: 20 },
+      { rank: 7, team: "PAYASO", played: 13, win: 5, draw: 4, lose: 4, gf: 12, ga: 17, gd: -5, points: 19 },
+      { rank: 8, team: "横須賀高校OB", played: 13, win: 5, draw: 3, lose: 5, gf: 19, ga: 21, gd: -2, points: 18 },
+      { rank: 9, team: "FCSOCIOS", played: 13, win: 5, draw: 2, lose: 6, gf: 28, ga: 27, gd: 1, points: 17 },
+      { rank: 10, team: "Yokohama Puente", played: 13, win: 4, draw: 2, lose: 7, gf: 10, ga: 18, gd: -8, points: 14 },
+      { rank: 11, team: "瀬谷インターナショナル", played: 13, win: 3, draw: 3, lose: 7, gf: 15, ga: 23, gd: -8, points: 12 },
+      { rank: 12, team: "江の島フリッパーズ", played: 13, win: 2, draw: 4, lose: 7, gf: 21, ga: 24, gd: -3, points: 10 },
+      { rank: 13, team: "Ringhio", played: 13, win: 2, draw: 2, lose: 9, gf: 11, ga: 25, gd: -14, points: 8 },
+      { rank: 14, team: "FC Girasole", played: 13, win: 2, draw: 1, lose: 10, gf: 16, ga: 54, gd: -38, points: 7 }
+    ]
+  },
 
 
   // ==============================
